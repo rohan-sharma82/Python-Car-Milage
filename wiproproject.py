@@ -59,12 +59,10 @@ print(f"Model saved to {filename}")
 
 #pip install streamlit==1.36.0
 
-"""Now, let's create a Python file for our Streamlit app. This file will:
+"""This is Car Millage Prediction Project:
 
-1.  Load the `linear_regression_model.pkl` model.
-2.  Create input fields for 'Horsepower' and 'Weight'.
-3.  Use the model to predict 'MPG' based on the user's input.
-4.  Display the predicted 'MPG'.
+1.  Enter 'Horsepower' and 'Weight'
+2.  Display the predicted 'MPG'.
 """
 
 # Commented out IPython magic to ensure Python compatibility.
