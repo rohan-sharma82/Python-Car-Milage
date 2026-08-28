@@ -70,7 +70,7 @@ print(f"Model saved to {filename}")
 # Commented out IPython magic to ensure Python compatibility.
 # %%writefile app.py
 # 
-%%writefile app.py
+
 
 import streamlit as st
 import pickle
