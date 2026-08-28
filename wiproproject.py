@@ -70,33 +70,32 @@ print(f"Model saved to {filename}")
 # Commented out IPython magic to ensure Python compatibility.
 # %%writefile app.py
 # 
- import streamlit as st
- import pickle
- import numpy as np
+import streamlit as st
+import pickle
+import numpy as np
  
- st.title('MPG Prediction App')
+st.title('MPG Prediction App')
  
  # Load the trained model
- filename = 'linear_regression_model.pkl'
+filename = 'linear_regression_model.pkl'
  with open(filename, 'rb') as file:
      model = pickle.load(file)
  
  st.write("Enter the Horsepower and Weight to predict the MPG.")
 # 
 # # Input fields for Horsepower and Weight
- horsepower = st.number_input('Horsepower', min_value=1, max_value=300, value=100)
- weight = st.number_input('Weight', min_value=1000, max_value=6000, value=2500)
+horsepower = st.number_input('Horsepower', min_value=1, max_value=300, value=100)
+weight = st.number_input('Weight', min_value=1000, max_value=6000, value=2500)
 # 
  # Predict button
- if st.button('Predict MPG'):
+if st.button('Predict MPG'):
      # Create a numpy array from the inputs
-     input_data = np.array([[horsepower, weight]])
+    input_data = np.array([[horsepower, weight]])
  
      # Make prediction
-     prediction = model.predict(input_data)[0]
+prediction = model.predict(input_data)[0]
  
-     st.success(f'Predicted MPG: {prediction:.2f}')
-
+st.success(f'Predicted MPG: {prediction:.2f}')
 
 """To run your Streamlit app, you need to execute the following commands in a new cell. This will launch the Streamlit server and create a public URL for you to access the app."""
 
